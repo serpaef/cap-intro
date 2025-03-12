@@ -13,6 +13,11 @@ GET {{server}}/main/Customers
 GET {{server}}/main/Customers?$expand=orders
 {{auth}}
 
+### Customers EXPAND Orders
+# @name Customers_GET
+GET {{server}}/main/Customers?$expand=orders($expand=invoice)
+{{auth}}
+
 
 ### Customers
 # @name Customers_POST
