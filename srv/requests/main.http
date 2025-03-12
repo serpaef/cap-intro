@@ -8,6 +8,12 @@ GET {{server}}/main/Customers
 {{auth}}
 
 
+### Customers EXPAND Orders
+# @name Customers_GET
+GET {{server}}/main/Customers?$expand=orders
+{{auth}}
+
+
 ### Customers
 # @name Customers_POST
 POST {{server}}/main/Customers
@@ -15,35 +21,132 @@ Content-Type: application/json
 {{auth}}
 
 {
-  "ID": "54802816-ce94-4cb6-9f90-85e6cde11488",
-  "name": "name-5480281",
-  "age": 86,
-  "createdAt": "2022-03-02T00:00:00.000Z",
-  "createdBy": "createdBy.39gm1@example.com",
-  "modifiedAt": "2006-11-25T00:00:00.000Z",
-  "modifiedBy": "modifiedBy.39gm1@example.net"
+  "ID": "6225025a-8080-445a-93b1-3e30d2d794f0",
+  "name": "name-6225025",
+  "age": 38,
+  "createdAt": "2004-07-13T00:00:00.000Z",
+  "createdBy": "createdBy.3pf9d@example.com",
+  "modifiedAt": "2006-04-29T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.3pf9d@example.com"
 }
 
 
 ### Customers
 # @name Customers_PATCH
-PATCH {{server}}/main/Customers/54802816-ce94-4cb6-9f90-85e6cde11488
+PATCH {{server}}/main/Customers/6225025a-8080-445a-93b1-3e30d2d794f0
 Content-Type: application/json
 {{auth}}
 
 {
-  "ID": "54802816-ce94-4cb6-9f90-85e6cde11488",
-  "name": "name-5480281",
-  "age": 86,
-  "createdAt": "2022-03-02T00:00:00.000Z",
-  "createdBy": "createdBy.39gm1@example.com",
-  "modifiedAt": "2006-11-25T00:00:00.000Z",
-  "modifiedBy": "modifiedBy.39gm1@example.net"
+  "ID": "6225025a-8080-445a-93b1-3e30d2d794f0",
+  "name": "name-6225025",
+  "age": 38,
+  "createdAt": "2004-07-13T00:00:00.000Z",
+  "createdBy": "createdBy.3pf9d@example.com",
+  "modifiedAt": "2006-04-29T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.3pf9d@example.com"
 }
 
 
 ### Customers
 # @name Customers_DELETE
-DELETE {{server}}/main/Customers/54802816-ce94-4cb6-9f90-85e6cde11488
+DELETE {{server}}/main/Customers/6225025a-8080-445a-93b1-3e30d2d794f0
+Content-Type: application/json
+{{auth}}
+
+
+### Orders
+# @name Orders_GET
+GET {{server}}/main/Orders
+{{auth}}
+
+### Orders EXPAND Customers
+# @name Orders_GET
+GET {{server}}/main/Orders?$expand=customer
+{{auth}}
+
+
+### Orders
+# @name Orders_POST
+POST {{server}}/main/Orders
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "2639751b-e5ce-4842-a766-f865ae12e483",
+  "amount": 93,
+  "customer_ID": "6225025a-8080-445a-93b1-3e30d2d794f0",
+  "createdAt": "2013-06-02T00:00:00.000Z",
+  "createdBy": "createdBy.1kkuf@example.org",
+  "modifiedAt": "2019-10-23T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.1kkuf@example.org"
+}
+
+
+### Orders
+# @name Orders_PATCH
+PATCH {{server}}/main/Orders/2639751b-e5ce-4842-a766-f865ae12e483
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "2639751b-e5ce-4842-a766-f865ae12e483",
+  "amount": 93,
+  "customer_ID": "6225025a-8080-445a-93b1-3e30d2d794f0",
+  "createdAt": "2013-06-02T00:00:00.000Z",
+  "createdBy": "createdBy.1kkuf@example.org",
+  "modifiedAt": "2019-10-23T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.1kkuf@example.org"
+}
+
+
+### Orders
+# @name Orders_DELETE
+DELETE {{server}}/main/Orders/2639751b-e5ce-4842-a766-f865ae12e483
+Content-Type: application/json
+{{auth}}
+
+
+### Invoices
+# @name Invoices_GET
+GET {{server}}/main/Invoices
+{{auth}}
+
+
+### Invoices
+# @name Invoices_POST
+POST {{server}}/main/Invoices
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "206782d3-f895-4f29-9fac-8c93e9a758b3",
+  "invoice_id": "invoice_id-206782",
+  "createdAt": "2016-03-06T00:00:00.000Z",
+  "createdBy": "createdBy.4fjy@example.com",
+  "modifiedAt": "2013-06-26T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.4fjy@example.com"
+}
+
+
+### Invoices
+# @name Invoices_PATCH
+PATCH {{server}}/main/Invoices/206782d3-f895-4f29-9fac-8c93e9a758b3
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "206782d3-f895-4f29-9fac-8c93e9a758b3",
+  "invoice_id": "invoice_id-206782",
+  "createdAt": "2016-03-06T00:00:00.000Z",
+  "createdBy": "createdBy.4fjy@example.com",
+  "modifiedAt": "2013-06-26T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.4fjy@example.com"
+}
+
+
+### Invoices
+# @name Invoices_DELETE
+DELETE {{server}}/main/Invoices/206782d3-f895-4f29-9fac-8c93e9a758b3
 Content-Type: application/json
 {{auth}}
