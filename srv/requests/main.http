@@ -4,38 +4,46 @@
 
 ### Customers
 # @name Customers_GET
-GET {{server}}/odata/v4/main/Customers
+GET {{server}}/main/Customers
 {{auth}}
 
 
 ### Customers
 # @name Customers_POST
-POST {{server}}/odata/v4/main/Customers
+POST {{server}}/main/Customers
 Content-Type: application/json
 {{auth}}
 
 {
-  "id": 4066583,
-  "name": "name-4066583",
-  "age": 7
+  "ID": "54802816-ce94-4cb6-9f90-85e6cde11488",
+  "name": "name-5480281",
+  "age": 86,
+  "createdAt": "2022-03-02T00:00:00.000Z",
+  "createdBy": "createdBy.39gm1@example.com",
+  "modifiedAt": "2006-11-25T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.39gm1@example.net"
 }
 
 
 ### Customers
 # @name Customers_PATCH
-PATCH {{server}}/odata/v4/main/Customers/4066583
+PATCH {{server}}/main/Customers/54802816-ce94-4cb6-9f90-85e6cde11488
 Content-Type: application/json
 {{auth}}
 
 {
-  "id": 4066583,
-  "name": "name-4066583",
-  "age": 7
+  "ID": "54802816-ce94-4cb6-9f90-85e6cde11488",
+  "name": "name-5480281",
+  "age": 86,
+  "createdAt": "2022-03-02T00:00:00.000Z",
+  "createdBy": "createdBy.39gm1@example.com",
+  "modifiedAt": "2006-11-25T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.39gm1@example.net"
 }
 
 
 ### Customers
 # @name Customers_DELETE
-DELETE {{server}}/odata/v4/main/Customers/4066583
+DELETE {{server}}/main/Customers/54802816-ce94-4cb6-9f90-85e6cde11488
 Content-Type: application/json
 {{auth}}
